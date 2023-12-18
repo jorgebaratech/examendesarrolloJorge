@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="900.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examen.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox prefHeight="90.0" prefWidth="738.0">
+      <children>
+         <ImageView fitHeight="83.0" fitWidth="266.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../images/logo_cesur.png" />
+            </image>
+            <HBox.margin>
+               <Insets bottom="10.0" left="189.0" top="10.0" />
+            </HBox.margin>
+         </ImageView>
+         <Label alignment="CENTER" prefHeight="84.0" prefWidth="202.0" text="Parking CESUR" textAlignment="CENTER">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+      </children>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="371.0" prefWidth="833.0" style="-fx-background-color: #002858;">
+      <children>
+         <VBox prefHeight="130.0" prefWidth="206.0">
+            <children>
+               <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="199.0" text="Nueva entrada" textFill="WHITE">
+                  <font>
+                     <Font size="16.0" />
+                  </font>
+               </Label>
+               <GridPane prefHeight="261.0" prefWidth="218.0">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                   <RowConstraints maxHeight="57.400000000000006" minHeight="10.0" prefHeight="57.400000000000006" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="31.79999389648438" minHeight="10.0" prefHeight="17.400000000000006" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                     <Label text="Matricula" textFill="WHITE" />
+                     <TextField fx:id="metermatricula" GridPane.columnIndex="1" />
+                     <SplitMenuButton fx:id="eleccionmodelo" mnemonicParsing="false" text="Lorem ipsum" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                       <items>
+                         <MenuItem mnemonicParsing="false" text="Action 1" />
+                         <MenuItem mnemonicParsing="false" text="Action 2" />
+                       </items>
+                     </SplitMenuButton>
+                     <Label text="Modelo" textFill="WHITE" GridPane.rowIndex="1" />
+                     <Label text="Cliente" textFill="WHITE" GridPane.rowIndex="2" />
+                     <Label text="Tarifa" textFill="WHITE" GridPane.rowIndex="3" />
+                     <VBox prefHeight="99.0" prefWidth="117.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <children>
+                           <RadioButton fx:id="checkstandar" mnemonicParsing="false" text="Standar" textFill="WHITE" />
+                           <RadioButton fx:id="chequeoferta" mnemonicParsing="false" text="Oferta" textFill="WHITE" />
+                           <RadioButton fx:id="cheklargaduracion" mnemonicParsing="false" text="Large duration" textFill="WHITE" />
+                        </children>
+                     </VBox>
+                     <Label text="Entrada" textFill="WHITE" GridPane.rowIndex="4" />
+                     <DatePicker fx:id="entradafecha" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     <DatePicker fx:id="salidafecha" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     <Label text="Salida" textFill="WHITE" GridPane.rowIndex="5" />
+                     <Label text="Coste" textFill="WHITE" GridPane.rowIndex="6" />
+                     <Label fx:id="Resultadopago" text="XXX $" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     <SplitMenuButton fx:id="eleccionmodelo2" mnemonicParsing="false" text="Lorem ipsum" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="Action 1" />
+                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                        </items>
+                     </SplitMenuButton>
+                  </children>
+               </GridPane>
+               <GridPane prefHeight="55.0" prefWidth="206.0">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                     <Button fx:id="botonañadir" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="15.0" prefWidth="108.0" text="Añadir a la tabla">
+                        <GridPane.margin>
+                           <Insets bottom="10.0" left="40.0" />
+                        </GridPane.margin>
+                     </Button>
+                     <Button fx:id="botonsalir" mnemonicParsing="false" prefHeight="26.0" prefWidth="159.0" text="Salir de la palicacion" GridPane.rowIndex="1">
+                        <GridPane.margin>
+                           <Insets left="10.0" />
+                        </GridPane.margin>
+                     </Button>
+                  </children>
+               </GridPane>
+            </children>
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </VBox>
+         <TableView fx:id="tabla" prefHeight="354.0" prefWidth="622.0">
+           <columns>
+             <TableColumn fx:id="Matriculatabla" prefWidth="115.19994812011646" text="Matricula" />
+             <TableColumn fx:id="Modelotabla" prefWidth="78.4000244140625" text="Modelo" />
+               <TableColumn fx:id="fechaentregatabla" prefWidth="83.20005798339844" text="Fecha entrega" />
+               <TableColumn fx:id="fechasalidatabla" prefWidth="119.99993896484375" text="Fecha salida" />
+               <TableColumn fx:id="cleintetabka" prefWidth="76.00006103515625" text="Cliente" />
+               <TableColumn fx:id="tarifatabla" prefWidth="59.20001220703125" text="Tarifa" />
+               <TableColumn fx:id="costetabla" prefWidth="81.5999755859375" text="Coste" />
+           </columns>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <padding>
+               <Insets top="10.0" />
+            </padding>
+         </TableView>
+      </children>
+   </HBox>
+
+    <Label fx:id="welcomeText" alignment="BASELINE_CENTER" prefHeight="18.0" prefWidth="252.0" text="Aplicacion creada por Jorge Baratech" />
+</VBox>
